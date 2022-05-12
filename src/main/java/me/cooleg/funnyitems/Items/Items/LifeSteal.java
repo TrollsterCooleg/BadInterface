@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class LifeSteal implements ItemInterface {
 
     private FunnyItems funnyItems;
+    private ItemInterface item = this;
     public LifeSteal(FunnyItems funnyItems) {
         this.funnyItems = funnyItems;
     }
@@ -48,9 +49,9 @@ public class LifeSteal implements ItemInterface {
     }
 
     @Override
-    public void register(Object obj) {
+    public ItemInterface register() {
         Bukkit.getLogger().info("Custom LifeSteal Item Loaded");
-       ((ArrayList<ItemInterface>) obj).add(this);
+        return item;
     }
 
     @Override

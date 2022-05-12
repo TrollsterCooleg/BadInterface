@@ -11,7 +11,7 @@ public interface ItemInterface {
 
     void sendInfo(Player p);
 
-    void register(Object obj);
+    ItemInterface register();
 
     boolean isItem(ItemStack item);
 

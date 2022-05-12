@@ -19,6 +19,6 @@ public final class FunnyItems extends JavaPlugin {
     }
 
     private void registerItems() {
-        new LifeSteal(this).register(items);
+        items.add(new LifeSteal(this).register());
     }
 }
