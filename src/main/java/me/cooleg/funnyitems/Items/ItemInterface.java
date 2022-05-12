@@ -7,7 +7,10 @@ public interface ItemInterface {
 
     ItemStack getItem();
 
-    void runFunction(Player p);
+    void runFunctionLeft(Player p);
+
+    void runFunctionRight(Player p);
+
 
     void sendInfo(Player p);
 

@@ -1,6 +1,8 @@
 package me.cooleg.funnyitems;
 
 import me.cooleg.funnyitems.Items.ItemInterface;
+import me.cooleg.funnyitems.Items.Items.EternalFire;
+import me.cooleg.funnyitems.Items.Items.Extinguisher;
 import me.cooleg.funnyitems.Items.Items.LifeSteal;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,5 +22,7 @@ public final class FunnyItems extends JavaPlugin {
 
     private void registerItems() {
         items.add(new LifeSteal(this).register());
+        items.add(new EternalFire(this).register());
+        items.add(new Extinguisher(this).register());
     }
 }
