@@ -24,9 +24,9 @@ public class LifeSteal implements ItemInterface {
 
     @Override
     public ItemStack getItem() {
-        ItemStack item = new ItemStack(Material.IRON_SWORD);
+        ItemStack item = new ItemStack(Material.STICK);
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName("LifeSteal Sword");
+        meta.setDisplayName("LifeSteal Stick");
         PersistentDataContainer contain = meta.getPersistentDataContainer();
         NamespacedKey key = new NamespacedKey(funnyItems, "type");
         contain.set(key, PersistentDataType.STRING, "LifeSword");

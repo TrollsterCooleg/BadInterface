@@ -14,6 +14,7 @@ public class itemsCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {return false;}
+        if (!sender.hasPermission("funnyitems.get")) {return false;}
         for (ItemInterface item : funnyItems.items) {
             ((Player) sender).getInventory().addItem(item.getItem());
         }
