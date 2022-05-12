@@ -20,19 +20,12 @@ public class ItemHandler implements Listener {
         if (event.getDamager() instanceof Player && event.getEntity() instanceof Player) {
             Player attacker = (Player) event.getDamager();
             Player victim = (Player) event.getEntity();
+            if (attacker.getInventory().getItemInMainHand() == null) {return;}
             for (ItemInterface item : list) {
-                if (item.isItem(attacker.getItemInUse())) {
+                if (item.isItem(attacker.getInventory().getItemInMainHand())) {
                     item.runFunction(victim);
                 }
             }
-        }
-    }
-
-    @EventHandler
-    public void onChat(AsyncPlayerChatEvent e) {
-        for (ItemInterface item : list) {
-            item.sendInfo(e.getPlayer());
-            e.getPlayer().getInventory().addItem(item.getItem());
         }
     }
 }

@@ -15,6 +15,7 @@ public final class FunnyItems extends JavaPlugin {
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(new ItemHandler(items), this);
         registerItems();
+        getCommand("items").setExecutor(new itemsCommand(this));
     }
 
     private void registerItems() {

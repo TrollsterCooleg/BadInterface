@@ -2,3 +2,5 @@ name: FunnyItems
 version: '${project.version}'
 main: me.cooleg.funnyitems.FunnyItems
 api-version: 1.18
+commands:
+  items:
